@@ -51,8 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body onload="initializeCalendar()">
     <?php 
-    echo '<div id="dob">' . $row['dob'] . '</div>';
-
+    if($loggedin){echo '<div id="dob">'.$row['dob'].'</div>';}
     ?>
     <section class="header">
         <span href="home.php" class="logo">EventHive.</span>

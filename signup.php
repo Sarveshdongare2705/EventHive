@@ -10,6 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["signup-email"];
     $password = $_POST['signup-password'];
     $cpassword = $_POST['confirm-password'];
+    $sql = "SELECT * from `users` where 'email'= '$email'";
+    $result1 = mysqli_query($conn , $sql);
+    if($result1 && mysqli_num_rows($result1)>0){
+        $showerror = true;
+        $text = 'User already exists';
+    }
     $dob = $_POST['dob_date'];
     if (!preg_match("/^[a-zA-Z]/", $username)) {
         $showerror = true;
