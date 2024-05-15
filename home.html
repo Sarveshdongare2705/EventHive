@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Home</title>
+</head>
+<body onload="initializeCalendar()">
+    <section class="header">
+        <span href="home.php" class="logo">EventHive.</span>
+        <nav class="navbar">
+            <a  href="home.php" class="navbar_buttons">Home</a>
+            <a  href="#" class="navbar_buttons">About</a>
+        </nav>
+        <div class="buttons">
+            <span>Sarvesh Dongare</span>
+            <a href="signup.php" class="btn";>SignUp</a><a href="signin.php" class="btn">SignIn</a>
+        </div>
+        <div class="buttons"></div>
+    </section>
+    <div class="content">
+    <div class="calendar-container">
+        <label for="month">Select Month:</label>
+        <input type="month" id="month" onchange="generateCalendar()">
+        <div class="days">
+        <div class="calendar-day1">Sun</div>
+        <div class="calendar-day1">Mon</div>
+        <div class="calendar-day1">Tue</div>
+        <div class="calendar-day1">Wed</div>
+        <div class="calendar-day1">Thu</div>
+        <div class="calendar-day1">Fri</div>
+        <div class="calendar-day1">Sat</div>
+        </div>
+        <div id="calendar"></div>
+    </div>
+    <div class="form-container">
+        <h2>Add Event</h2>
+        <form id="eventForm" action="#" method="POST">
+            <input type="text" id="eventTitle" placeholder="Event Title" required name="title">
+            <textarea id="eventDescription" placeholder="Event Description" name="desc"></textarea>
+            <input type="date" id="eventDate" required name="event_date">
+            <button class="submitbtn" type="submit">Add Event</button>
+        </form>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
